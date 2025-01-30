@@ -10,7 +10,10 @@ import settingRouter from './routes/setting.js'
 // const express=require('express')
 connectToDatabase()
 const app= express()
-app.use(cors())
+app.use(cors({
+    origin : "https://smart-leave-client.vercel.app",
+    credentials:true
+}))
 app.use(express.json())
 app.use("/public/uploads", express.static(path.resolve("public/uploads")));
 app.use('/auth',authRouter)
