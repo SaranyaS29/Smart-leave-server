@@ -11,7 +11,7 @@ import settingRouter from './routes/setting.js'
 connectToDatabase()
 const app= express()
 app.use(cors({
-    origin : "https://relaxed-bavarois-65013e.netlify.app",
+    origin : "https://smart-leave-client.vercel.app",
       methods: "GET, POST, PUT, DELETE",
     credentials:true
 }))
